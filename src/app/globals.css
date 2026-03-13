@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f0f23;
+  --card: #ffffff;
+  --card-foreground: #0f0f23;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #6366f1;
+  --primary: #6366f1;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #1e293b;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #1e293b;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f0f23;
+    --foreground: #f8fafc;
+    --card: #1e1e3a;
+    --card-foreground: #f8fafc;
+    --border: #2d2d5a;
+    --input: #2d2d5a;
+    --ring: #818cf8;
+    --primary: #818cf8;
+    --primary-foreground: #0f0f23;
+    --secondary: #1e1e3a;
+    --secondary-foreground: #f8fafc;
+    --muted: #1e1e3a;
+    --muted-foreground: #94a3b8;
+    --accent: #1e1e3a;
+    --accent-foreground: #f8fafc;
+  }
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"C:\\\\Users\\\\Ankur\\\\Documents\\\\cc-mini-course\\\\narrative-voice\" && python3 -c \"\nimport zipfile, xml.etree.ElementTree as ET, re\n\nwith zipfile.ZipFile\\('NarrateMe_PRD_v1.1.docx', 'r'\\) as z:\n    with z.open\\('word/document.xml'\\) as f:\n        tree = ET.parse\\(f\\)\n        root = tree.getroot\\(\\)\n        ns = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}\n        paragraphs = root.findall\\('.//w:p', ns\\)\n        text = []\n        for p in paragraphs:\n            runs = p.findall\\('.//w:t', ns\\)\n            line = ''.join\\(r.text or '' for r in runs\\)\n            if line.strip\\(\\):\n                text.append\\(line\\)\n        print\\('\\\\n'.join\\(text\\)\\)\n\")",
+      "Bash(cd \"C:/Users/Ankur/Documents/cc-mini-course/narrative-voice\" && npm install 2>&1 | tail -5)",
+      "Bash(cd \"C:/Users/Ankur/Documents/cc-mini-course/narrative-voice\" && npm install 2>&1 | tail -8)",
+      "Bash(cd \"C:/Users/Ankur/Documents/cc-mini-course/narrative-voice\" && npx tsc --noEmit 2>&1 | head -60)",
+      "Bash(cd \"C:/Users/Ankur/Documents/cc-mini-course/narrative-voice\" && npx tsc --noEmit 2>&1)",
+      "Bash(cd \"C:/Users/Ankur/Documents/cc-mini-course/narrative-voice\" && npm run build 2>&1 | tail -20)",
+      "Bash(cd \"C:/Users/Ankur/Documents/cc-mini-course/narrative-voice\" && npm run build 2>&1 | tail -15)",
+      "Bash(cd \"C:/Users/Ankur/Documents/cc-mini-course/narrative-voice\" && npm run build 2>&1 | tail -25)",
+      "Bash(ls \"C:/Users/Ankur/Documents/cc-mini-course/narrative-voice/.env\"* 2>/dev/null || echo \"no .env files yet\")"
+    ]
+  }
+}
